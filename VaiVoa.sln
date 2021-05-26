@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaiVoa.Api", "VaiVoa.Api\VaiVoa.Api.csproj", "{8C859E04-F70F-43C7-8F21-950388657271}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaiVoa.Domain", "VaiVoa.Domain\VaiVoa.Domain.csproj", "{CBF16F5A-23E3-47AA-8A03-8BC200A8B5A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaiVoa.Infra", "VaiVoa.Infra\VaiVoa.Infra.csproj", "{876CF194-12CF-4275-968A-85F492832C42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{8C859E04-F70F-43C7-8F21-950388657271}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C859E04-F70F-43C7-8F21-950388657271}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C859E04-F70F-43C7-8F21-950388657271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBF16F5A-23E3-47AA-8A03-8BC200A8B5A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF16F5A-23E3-47AA-8A03-8BC200A8B5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF16F5A-23E3-47AA-8A03-8BC200A8B5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF16F5A-23E3-47AA-8A03-8BC200A8B5A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{876CF194-12CF-4275-968A-85F492832C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{876CF194-12CF-4275-968A-85F492832C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{876CF194-12CF-4275-968A-85F492832C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{876CF194-12CF-4275-968A-85F492832C42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

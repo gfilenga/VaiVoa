@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using VaiVoa.Domain.Models;
 
 namespace VaiVoa.Infra.Context
 {
@@ -9,6 +10,8 @@ namespace VaiVoa.Infra.Context
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<CreditCard> CreditCards { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             foreach (var property in modelBuilder.Model.GetEntityTypes()

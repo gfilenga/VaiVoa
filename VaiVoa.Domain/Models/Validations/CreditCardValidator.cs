@@ -11,7 +11,8 @@ namespace VaiVoa.Domain.Models.Validations
         {
             RuleFor(cc => cc.Number).
                 NotEmpty().WithMessage("Digite um número de cartão")
-                .CreditCard().WithMessage("{PropertyValue} não é um {PropertyName} válido");
+                .Must(c => c.Substring(0,1) == "4").WithMessage("O número do cartão deve começar com 4 (Visa)")
+                .Length(16).WithMessage("{PropertyName} deve ter {PropertyValue} caracteres");
 
             RuleFor(cc => cc.SecurityCode)
                 .LessThan(999).WithMessage("Digite um {PropertyName} válido")

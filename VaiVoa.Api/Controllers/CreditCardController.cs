@@ -9,7 +9,7 @@ using VaiVoa.Domain.Models;
 
 namespace VaiVoa.Api.Controllers
 {
-    [Route("api/v1/credit-cards")]
+    [Route("api/v1/credit-card")]
     public class CreditCardController : MainController
     {
         private readonly ICreditCardRepository _creditCardRepository;
@@ -41,7 +41,10 @@ namespace VaiVoa.Api.Controllers
             return CustomResponse(creditCard);
         }
 
-    
-        
+        [HttpGet]
+        public async Task<IEnumerable<CreditCard>> ListAllByEmail(string email)
+        {
+            return await _creditCardRepository.GetAllByEmail(email);
+        }
     }
 }

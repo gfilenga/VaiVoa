@@ -27,8 +27,8 @@ namespace VaiVoa.Domain.Models
 
         private string GenerateCreditCardNumber()
         {
-            string creditCardNumber = "";
-            for (int i = 0; i < 16; i++)
+            string creditCardNumber = "4";
+            for (int i = 0; i < 15; i++)
             {
                 Random rnd = new Random();
                 var number = rnd.Next(1, 10);

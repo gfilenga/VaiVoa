@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using VaiVoa.Api.Configuration;
 using VaiVoa.Infra.Context;
 
 namespace VaiVoa.Api
@@ -30,6 +31,8 @@ namespace VaiVoa.Api
 
             services.AddDbContext<DataContext>(opt =>
                 opt.UseSqlServer(Configuration.GetConnectionString("connectionString")));
+
+            services.ResolveDependencies();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -8,13 +8,11 @@ namespace VaiVoa.Domain.Models
     {
         public CreditCard() { }
 
-        public CreditCard(string number, 
-            DateTime validThru, 
-            short securityCode, 
+        public CreditCard(int securityCode, 
             Guid clientId)
         {
-            Number = number;
-            ValidThru = validThru;
+            Number = GenerateCreditCardNumber();
+            ValidThru = DateTime.Now.AddDays(2555);
             SecurityCode = securityCode;
             ClientId = clientId;
         }
@@ -26,5 +24,18 @@ namespace VaiVoa.Domain.Models
         // Relacionamentos
         public Guid ClientId { get; set; }
         public Client Client { get; set; }
+
+        private string GenerateCreditCardNumber()
+        {
+            string creditCardNumber = "";
+            for (int i = 0; i < 16; i++)
+            {
+                Random rnd = new Random();
+                var number = rnd.Next(1, 10);
+                creditCardNumber += number.ToString();
+            }
+
+            return creditCardNumber;
+        }
     }
 }

@@ -7,5 +7,7 @@ namespace VaiVoa.Api.Commands
 {
     public class CreateCreditCardCommand
     {
+        public int SecurityCode { get; set; }
+        public Guid ClientId { get; set; }
     }
 }

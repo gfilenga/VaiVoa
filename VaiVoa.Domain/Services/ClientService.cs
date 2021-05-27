@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VaiVoa.Domain.Interfaces;
@@ -20,6 +21,12 @@ namespace VaiVoa.Domain.Services
         public async Task Create(Client client)
         {
             if (!ExecutarValidacao(new ClientValidator(), client)) return;
+
+            if (_clientRepository.Search(c => c.Email == client.Email).Result.Any())
+            {
+                Notificar("Email já cadastrado!");
+                return;
+            }
 
             await _clientRepository.Create(client);
         }

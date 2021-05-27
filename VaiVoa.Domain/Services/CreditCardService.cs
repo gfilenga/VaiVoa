@@ -24,24 +24,9 @@ namespace VaiVoa.Domain.Services
 
             await _creditCardRepository.Create(creditCard);
         }
-        public async Task Update(CreditCard creditCard)
-        {
-            if (!ExecutarValidacao(new CreditCardValidator(), creditCard)) return;
-
-            await _creditCardRepository.Update(creditCard);
-        }
-
-        public async Task<bool> Delete(Guid id)
-        {
-            await _creditCardRepository.Delete(id);
-            return true;
-        }
-
         public void Dispose()
         {
             _creditCardRepository?.Dispose();
         }
-
-        
     }
 }

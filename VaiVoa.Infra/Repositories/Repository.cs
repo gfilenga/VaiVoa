@@ -33,11 +33,6 @@ namespace VaiVoa.Infra.Repositories
             return await DbSet.AsNoTracking().ToListAsync();
         }
 
-        public virtual async Task<TEntity> GetById(Guid id)
-        {
-            return await DbSet.FindAsync(id);
-        }
-
         public virtual async Task<TEntity> GetByIdNoTracking(Guid id)
         {
             return await DbSet.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
@@ -56,12 +51,6 @@ namespace VaiVoa.Infra.Repositories
         public virtual async Task Delete(Guid id)
         {
             DbSet.Remove(new TEntity { Id = id });
-            await SaveChanges();
-        }
-
-        public virtual async Task Delete(TEntity entity)
-        {
-            DbSet.Remove(entity);
             await SaveChanges();
         }
 

@@ -28,10 +28,7 @@ namespace VaiVoa.Domain.Models
         // Relacionamentos
         public IList<CreditCard> CreditCards { get; set; }
 
-        public void UpdateClient(string name,
-            string email,
-            string password,
-            string confirmPassword)
+        public void UpdateClient(string name,string email,string password, string confirmPassword)
         {
             Name = name;
             Email = email;

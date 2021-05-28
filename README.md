@@ -11,7 +11,7 @@ guilherme.filenga@gmail.com
 
 # Primeiros Passos
 
-### Tecnologias
+## Tecnologias
 
 Utilizaremos algumas praticidades do ecossistema .NET para facilitar na configuração inicial do projeto. 
 
@@ -26,7 +26,7 @@ A API deverá gerar números aleatórios para o pedido de novo cartão. Cada car
 Essencialmente são 2 endpoints. Um receberá o email da pessoa e retornará um objeto de resposta com o número do cartão de crédito. E o outro endpoint deverá listar, em ordem de criação, todos os cartões de crédito virtuais de um solicitante (passando seu email como parâmetro).
 A implementação deverá ser escrita utilizando C# com .Net Core e Entity Framework Core.
 
-### Criando a solução
+## Criando a solução
 
 Abra o Visual Studio 2019 e procure pelo template de projeto ASP .NET Core Web Api. Ele criará o setup inicial do nosso projeto e agilizará o processo de desenvolvimento.
 
@@ -60,7 +60,7 @@ Além de, adicionar no projeto de infra o projeto de domain como referência.
 
 -- Swashbuckle.AspNetCore
 
-### Configurando Swagger
+## Configurando Swagger
 
 Coloque essas linhas de código no método ConfigureServices e no método Configure da classe startup, respectivamente:
 ```csharp
@@ -77,7 +77,7 @@ if (env.IsDevelopment())
         app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "VaiVoa.Api v1"));
     }
 ```
-### Configurando o contexto
+## Configurando o contexto
 
 Dentro do projeto de infra, crie uma pasta chamada Context e crie uma classe chamada DataContext.
 
@@ -139,10 +139,10 @@ A seguir, dentro do projeto de API, dentro do método “configure services” n
 Com o banco de dados resolvido, agora partiremos para o código.
 
 
-### Camada de domínio
+## Camada de domínio
 Utilizaremos o conceito de injeção de dependências para este projeto. O .NET possui um ótimo suporte nativo e facilita bastante na produtividade e desacoplamento do código. Portanto, dentro dessa camada, iremos focar na construção de contratos que iremos implementá-los posteriormente nas outras camadas da solução. Além de construir nossas entidades/modelos e validar as requisições e regras de negócio por meio do pacote FluentValidation.
 
-### Notificações
+## Notificações
 As notificações irão centralizar os erros que forem encontrados em qualquer nível da aplicação. Para isso, nós iremos criar um contrato que irá definir quais métodos teremos dentro dessa classe notificadora, além de criar um modelo para a notificação em si.
 
 Dentro do projeto de domain, você irá criar uma pasta com o nome de Interfaces e dentro dela criar uma interface chamada INotificator. O prefixo “i” é importante para padronizar o que é uma interface e o que não é.

@@ -127,7 +127,7 @@ Dentro do appsettings.Development.json definimos a nossa string de conexão com 
 
 Não irei entrar em detalhes de como criar uma instância do SQL Server na sua máquina, porém, aqui está um link que irá ajudar, utilizando docker: https://balta.io/blog/sql-server-docker.
 
-A seguir, dentro do projeto de API, dentro do método “configure services” na classe Startup, adicione esse trecho de código:
+A seguir, dentro do projeto de API, no do método “configure services” na classe Startup, adicione esse trecho de código:
 
 ```csharp
     ...

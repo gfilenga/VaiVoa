@@ -1,6 +1,3 @@
-# VaiVoa
-Projeto de api para o processo seletivo Vai Voa
-
 # Guilherme Rodrigues Filenga
 github.com/gfilenga
 +55 11 94765-7622

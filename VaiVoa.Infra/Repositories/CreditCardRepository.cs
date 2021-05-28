@@ -16,7 +16,8 @@ namespace VaiVoa.Infra.Repositories
 
         public async Task<IEnumerable<CreditCard>> GetAllByEmail(string email)
         {
-            return await Context.CreditCards.AsNoTracking().Where(c => c.Client.Email == email).ToListAsync();
+            return await Context.CreditCards.AsNoTracking().Where(c => c.Client.Email == email)
+                                            .OrderBy(c => c.Created_at).ToListAsync();
         }
     }
 }

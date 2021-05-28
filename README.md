@@ -140,7 +140,7 @@ Com o banco de dados resolvido, agora partiremos para o código.
 
 
 ## Camada de domínio
-Utilizaremos o conceito de injeção de dependências para este projeto. O .NET possui um ótimo suporte nativo e facilita bastante na produtividade e desacoplamento do código. Portanto, dentro dessa camada, iremos focar na construção de contratos que iremos implementá-los posteriormente nas outras camadas da solução. Além de construir nossas entidades/modelos e validar as requisições e regras de negócio por meio do pacote FluentValidation.
+Utilizaremos o conceito de injeção de dependências para este projeto. O .NET possui um ótimo suporte nativo e facilita bastante na produtividade e desacoplamento do código. Portanto, dentro dessa camada, iremos focar na construção de contratos que iremos implementar posteriormente nas outras camadas da solução. Além de construir nossas entidades/modelos e validar as requisições e regras de negócio por meio do pacote FluentValidation.
 
 ## Notificações
 As notificações irão centralizar os erros que forem encontrados em qualquer nível da aplicação. Para isso, nós iremos criar um contrato que irá definir quais métodos teremos dentro dessa classe notificadora, além de criar um modelo para a notificação em si.

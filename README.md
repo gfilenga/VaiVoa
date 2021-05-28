@@ -42,14 +42,22 @@ Além de, adicionar no projeto de infra o projeto de domain como referência.
 
 ### Instalando pacotes
 - Dentro do projeto de Infra iremos instalar os seguintes pacotes: 
+
 -- Microsoft.EntityFrameworkCore
+
 -- Microsoft.EntityFrameworkCore.Relational
+
 -- Microsoft.EntityFrameworkCore.SqlServer 
 - Dentro do projeto de domínio iremos instalar os seguintes pacotes:
+
 -- FluentValidation.AspNetCore
+
 - Por fim, dentro do projeto da Api:
+
 -- Microsoft.EntityFrameworkCore
+
 -- Microsoft.EntityFrameworkCore.Design
+
 -- Swashbuckle.AspNetCore
 
 ### Configurando Swagger

@@ -5,7 +5,7 @@ guilherme.filenga@gmail.com
 
 
 # Construa uma API REST em C# com .NET CORE e Entity Framework Core
-## Link do arquivo pdf desse "blog post": https://drive.google.com/file/d/1pk6qX1IavU5BpKCTweBATWuvyXUTdtUl/view?usp=sharing
+## Link do arquivo pdf desse "blog post": https://drive.google.com/file/d/1nywMFFJAzE0JEQ6_OqOYeFnow_aQ-V3S/view?usp=sharing
 
 > Disclaimer: A arquitetura desse projeto será “inflada” com o objetivo acadêmico, para soluções mais objetivas, no mundo "real", é preciso identificar a necessidade da aplicação e planejar para o futuro.
 

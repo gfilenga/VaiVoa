@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaiVoa.Api", "VaiVoa.Api\VaiVoa.Api.csproj", "{8C859E04-F70F-43C7-8F21-950388657271}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaiVoa.Api", "VaiVoa.Api\VaiVoa.Api.csproj", "{8C859E04-F70F-43C7-8F21-950388657271}"
 	ProjectSection(ProjectDependencies) = postProject
 		{CBF16F5A-23E3-47AA-8A03-8BC200A8B5A1} = {CBF16F5A-23E3-47AA-8A03-8BC200A8B5A1}
 		{876CF194-12CF-4275-968A-85F492832C42} = {876CF194-12CF-4275-968A-85F492832C42}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaiVoa.Domain", "VaiVoa.Domain\VaiVoa.Domain.csproj", "{CBF16F5A-23E3-47AA-8A03-8BC200A8B5A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaiVoa.Domain", "VaiVoa.Domain\VaiVoa.Domain.csproj", "{CBF16F5A-23E3-47AA-8A03-8BC200A8B5A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaiVoa.Infra", "VaiVoa.Infra\VaiVoa.Infra.csproj", "{876CF194-12CF-4275-968A-85F492832C42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaiVoa.Infra", "VaiVoa.Infra\VaiVoa.Infra.csproj", "{876CF194-12CF-4275-968A-85F492832C42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

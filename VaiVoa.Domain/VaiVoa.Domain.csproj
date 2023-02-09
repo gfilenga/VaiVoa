@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.SQS" Version="3.7.100.70" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="10.1.0" />
   </ItemGroup>
 

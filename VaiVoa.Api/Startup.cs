@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using VaiVoa.Api.Configuration;
+using VaiVoa.Domain.Messaging;
 using VaiVoa.Infra.Context;
 
 namespace VaiVoa.Api
@@ -33,7 +34,10 @@ namespace VaiVoa.Api
             services.AddDbContext<DataContext>(opt =>
                 opt.UseSqlServer(Configuration.GetConnectionString("connectionString")));
 
+
             services.ResolveDependencies();
+
+            services.Configure<QueueSettings>(Configuration.GetSection(QueueSettings.Key));
 
             services.AddSwaggerGen(c =>
             {

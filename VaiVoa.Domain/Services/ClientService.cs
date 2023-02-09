@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Amazon.Runtime.Internal.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VaiVoa.Domain.Interfaces;
+using VaiVoa.Domain.Mappings;
+using VaiVoa.Domain.Messaging;
 using VaiVoa.Domain.Models;
 using VaiVoa.Domain.Models.Validations;
 
@@ -12,10 +15,14 @@ namespace VaiVoa.Domain.Services
     public class ClientService : BaseService, IClientService
     {
         private readonly IClientRepository _clientRepository;
-        public ClientService(INotificator notificator, 
-            IClientRepository clientRepository) : base(notificator)
+        private readonly ISqsMessenger _sqsMessenger;
+
+        public ClientService(INotificator notificator,
+                             IClientRepository clientRepository,
+                             ISqsMessenger sqsMessenger) : base(notificator)
         {
             _clientRepository = clientRepository;
+            _sqsMessenger = sqsMessenger;
         }
 
         public async Task Create(Client client)
@@ -28,7 +35,16 @@ namespace VaiVoa.Domain.Services
                 return;
             }
 
-            await _clientRepository.Create(client);
+            try
+            {
+                await _clientRepository.Create(client);
+                await _sqsMessenger.SendMessageAsync(client.ToCustomerCreatedMessage());
+            }
+            catch (Exception ex)
+            {
+                Notificar($"Ocorreu um erro inesperado: {ex.Message}");
+                return;
+            }
         }
              
         public async Task Update(Client client)

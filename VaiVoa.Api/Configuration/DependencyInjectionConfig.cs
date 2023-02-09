@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Amazon.SQS;
 using Microsoft.Extensions.DependencyInjection;
 using VaiVoa.Domain.Interfaces;
+using VaiVoa.Domain.Messaging;
 using VaiVoa.Domain.Notifications;
 using VaiVoa.Domain.Services;
 using VaiVoa.Infra.Context;
+using VaiVoa.Infra.Messaging;
 using VaiVoa.Infra.Repositories;
 
 namespace VaiVoa.Api.Configuration
@@ -24,6 +27,11 @@ namespace VaiVoa.Api.Configuration
             services.AddScoped<ICreditCardService, CreditCardService>();
             //Notificator
             services.AddScoped<INotificator, Notificator>();
+
+
+            // Amazon SQS
+            services.AddSingleton<ISqsMessenger, SqsMessenger>();
+            services.AddSingleton<IAmazonSQS, AmazonSQSClient>();
 
             return services;
         }

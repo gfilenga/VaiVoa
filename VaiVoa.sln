@@ -13,11 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaiVoa.Domain", "VaiVoa.Dom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaiVoa.Infra", "VaiVoa.Infra\VaiVoa.Infra.csproj", "{876CF194-12CF-4275-968A-85F492832C42}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{F0FF009E-8B87-4447-9313-A8B638999AF3}"
-	ProjectSection(SolutionItems) = preProject
-		cadastro-autor.sql = cadastro-autor.sql
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
